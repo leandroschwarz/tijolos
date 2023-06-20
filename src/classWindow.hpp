@@ -31,9 +31,25 @@ public:
             void
     );
 
+    void create(
+            char *title_p
+    );
 
+    void cleanUp(
+            void
+    );
 
-
+    void fillBackground(
+            void
+    );
+    void presentScene(
+            void
+    );
+    void blit(
+            SDL_Texture *texture_p,
+            int posX_p,
+            int posY_p
+    );
 
 private:
     int             _posX;
