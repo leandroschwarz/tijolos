@@ -1,54 +1,42 @@
-// classPaddle.cpp
 
-#include "classPaddle.hpp"
+#include "classWall.hpp"
 
-Paddle::Paddle()
+Wall::Wall()
 {
     this->_posX = 0;
     this->_posY = 0;
     this->_width = 0;
     this->_height = 0;
-    this->_visible = true;
     this->_texture = nullptr;
 }
 
-void Paddle::setPosition(int posX_p, int posY_p)
+void Wall::setPosition(int posX_p, int posY_p)
 {
     this->_posX = posX_p;
     this->_posY = posY_p;
 }
 
-int Paddle::getPosX(void)
+int Wall::getPosX(void)
 {
     return this->_posX;
 }
 
-int Paddle::getPosY(void)
+int Wall::getPosY(void)
 {
     return this->_posY;
 }
 
-uint16_t Paddle::getWidth(void)
+uint16_t Wall::getWidth(void)
 {
     return this->_width;
 }
 
-uint16_t Paddle::getHeight(void)
+uint16_t Wall::getHeight(void)
 {
     return this->_height;
 }
 
-void Paddle::setVisibility(bool visibility_p)
-{
-    this->_visible = visibility_p;
-}
-
-bool Paddle::getVisibility(void)
-{
-    return this->_visible;
-}
-
-void Paddle::setTexture(SDL_Texture *texture_p)
+void Wall::setTexture(SDL_Texture *texture_p)
 {
     int auxW, auxH;
 
@@ -59,7 +47,7 @@ void Paddle::setTexture(SDL_Texture *texture_p)
     this->_height = auxH;
 }
 
-SDL_Texture *Paddle::getTexture(void)
+SDL_Texture *Wall::getTexture(void)
 {
     return this->_texture;
 }
