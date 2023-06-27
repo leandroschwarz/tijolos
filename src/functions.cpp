@@ -102,6 +102,23 @@ Collision checkCollisionAll(void)
         return auxCollision;
     }
     // Ball and bricks
+    for(Brick &auxBrick : bricks) {
+        if(auxBrick.getVisibility()) {
+            auxCollision = checkCollision(
+                            ball.getPosX(),
+                            ball.getPosY(),
+                            ball.getRadius(),
+                            auxBrick.getPosX(),
+                            auxBrick.getPosY(),
+                            auxBrick.getWidth(),
+                            auxBrick.getHeight()
+                    );
+            if(auxCollision != Collision::NONE) {
+                auxBrick.setVisibility(false);
+                return auxCollision;
+            }
+        }
+    }
 
     return auxCollision;
 }

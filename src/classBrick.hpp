@@ -28,6 +28,13 @@ public:
             SDL_Texture *texture_p
     );
 
+    int getPosX(void);
+    int getPosY(void);
+    uint16_t getWidth(void);
+    uint16_t getHeight(void);
+    SDL_Texture *getTexture(void);
+
+
 private:
     int         _posX;
     int         _posY;

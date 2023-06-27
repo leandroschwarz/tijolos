@@ -4,7 +4,11 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <vector>
 #include "defines.hpp"
+#include "classBrick.hpp"
+
+extern std::vector<Brick> bricks;
 
 Collision checkCollision(
         int cPosX_p,
