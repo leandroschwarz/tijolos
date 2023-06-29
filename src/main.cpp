@@ -168,7 +168,6 @@ int main(int argc, char **argv)
         // Desenha a palheta
         mainWindow.blit(ball.getTexture(), ball.getPosX(), ball.getPosY());
 
-
         for(Brick &auxBrick : bricks) {
             if(auxBrick.getVisibility()) {
                 mainWindow.blit(auxBrick.getTexture(), auxBrick.getPosX(), auxBrick.getPosY());
